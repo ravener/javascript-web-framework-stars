@@ -74,6 +74,10 @@ async function fetchRepos() {
   // Fetch Deno frameworks.
   for(const repo of list.deno) results.deno.push(await fetchRepo(repo));
 
+  // Sort by stars
+  results.node = results.node.sort((x, y) => x.stars < y.stars ? 1 : -1);
+  results.deno = results.deno.sort((x, y) => x.stars < y.stars ? 1 : -1);
+
   return results;
 }
 
