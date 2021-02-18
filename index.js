@@ -79,7 +79,7 @@ async function fetchRepos() {
 }
 
 function writeTableLine(fr) {
-  return `| [${fr.name}](${fr.url}) | ${fr.stars} | ${fr.forks} | ${fr.issues} | ${fr.description} | ${fr.lastCommit.toLocaleString()}| \n`;
+  return `| [${fr.name}](${fr.url}) | ${fr.stars} | ${fr.forks} | ${fr.issues} | ${fr.description} | ${fr.lastCommit.toLocaleString()} | \n`;
 }
 
 (async() => {
