@@ -15,8 +15,7 @@ Please update **list.json** (via Pull Request)
 Inspired by [go-web-framework-stars](https://github.com/mingrammar/go-web*framework-stars)
 
 ## Node.js Frameworks
-${tableHeader}
-`;
+${tableHeader}`;
 
 const token = fs.readFileSync("access_token.txt").toString().trim();
 
