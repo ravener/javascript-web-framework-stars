@@ -3,9 +3,13 @@
     "expressjs/express",
     "koajs/koa",
     "lukeed/polka",
-    "lukeed/polkadot"
+    "lukeed/polkadot",
+    "hapijs/hapi",
+    "fastify/fastify"
   ],
   "deno": [
-    "alosaur/alosaur"
+    "alosaur/alosaur",
+    "fastrojs/fastro",
+    "sholladay/pogo"
   ]
 }
