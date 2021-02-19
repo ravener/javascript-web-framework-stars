@@ -30,10 +30,15 @@ if(!token) {
 function fetchJSON(url) {
   console.log(`GET ${url}`);
 
+  const options = {
+    headers: {
+      "Content-Type": "application/json",
+      "User-Agent": "https://github.com/javascript-web-framework-stars"
+    }
+  };
+
   return new Promise((resolve, reject) => {
-    return https.get(url, {
-      headers: { "Content-Type": "application/json", "User-Agent": "https://github.com/ravener/javascript-web-framework-stars" }
-    }, (res) => {
+    return https.get(url, options, (res) => {
       if(res.statusCode != 200) return reject(new Error(`HTTP Returned ${res.statusCode}`));
 
 
@@ -97,6 +102,8 @@ function writeTableLine(fr) {
   for(const repo of deno) {
     readme += writeTableLine(repo);
   }
+
+  readme += `\n*Last Automatic Update: ${new Date().toLocaleString()}*`;
 
   fs.writeFileSync("README.md", readme);
 })();
